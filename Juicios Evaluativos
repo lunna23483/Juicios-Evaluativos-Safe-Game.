@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reporte SST - Safe Game</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #1e88e5;
+}
+
+.section {
+  margin-top: 25px;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.item {
+  margin-bottom: 15px;
+}
+
+.line {
+  border-bottom: 1px solid #ccc;
+  display: inline-block;
+  width: 200px;
+}
+
+.badge {
+  color: green;
+  font-weight: bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🧾 REPORTE DE CAPACITACIÓN SST – SAFE GAME</h1>
+
+<div class="section">
+<div class="title">👤 Datos del participante</div>
+Nombre: <span class="line"></span><br>
+Empresa: <span class="line"></span><br>
+Fecha: <span class="line"></span><br>
+Hora: <span class="line"></span><br>
+Puntaje: <span class="line"></span><br>
+Firma: <span class="line"></span>
+</div>
+
+<div class="section">
+<div class="title">📊 Resumen general</div>
+Total de módulos: 9<br>
+Tipo: Juegos interactivos + Videos formativos<br>
+Sistema: Safe Game – Capacitación SST con evidencia digital
+</div>
+
+<div class="section">
+<div class="title">🎮 Juegos interactivos</div>
+
+<div class="item">
+📌 Juego AT – Condiciones de accidentes de trabajo<br>
+Resultado: ____ %<br>
+<span class="badge">✔ Identifica condiciones inseguras</span>
+</div>
+
+<div class="item">
+📌 No te Accidentes – Quiz<br>
+Resultado: ____ %<br>
+<span class="badge">✔ Reconoce prácticas seguras</span>
+</div>
+
+<div class="item">
+📌 Inspector X – EPP<br>
+Resultado: ____ %<br>
+<span class="badge">✔ Selecciona EPP correctamente</span>
+</div>
+
+<div class="item">
+📌 Challenger – EPP<br>
+Resultado: ____ %<br>
+<span class="badge">✔ Clasifica EPP</span>
+</div>
+
+<div class="item">
+📌 Memoria SST<br>
+Resultado: ____ %<br>
+<span class="badge">✔ Relaciona EPP con uso</span>
+</div>
+
+<div class="item">
+📌 Riesgo en Tiempo Real<br>
+Resultado: ____ %<br>
+<span class="badge">✔ Identifica riesgos</span>
+</div>
+
+</div>
+
+<div class="section">
+<div class="title">🎥 Videos formativos</div>
+
+<div class="item">
+📌 Trabajo en Cliente<br>
+Resultado: ____ %<br>
+<span class="badge">✔ Comprende riesgos externos</span>
+</div>
+
+<div class="item">
+📌 Riesgo eléctrico<br>
+Resultado: ____ %<br>
+<span class="badge">✔ Reconoce riesgos eléctricos</span>
+</div>
+
+<div class="item">
+📌 Inducción SST<br>
+Resultado: ____ %<br>
+<span class="badge">✔ Comprende SG-SST</span>
+</div>
+
+</div>
+
+<div class="section">
+<div class="title">📌 Conclusión</div>
+El participante ha desarrollado competencias en identificación de riesgos, uso de EPP y prevención de accidentes mediante Safe Game.
+</div>
+
+</div>
+
+</body>
+</html>
