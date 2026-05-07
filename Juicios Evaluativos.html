@@ -1,57 +1,180 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reporte SST - Safe Game</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Safe Game | Reporte SST</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f9;
-  margin: 0;
-  padding: 20px;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#071a2f,#0d2f4f,#134b73);
+  min-height:100vh;
+  padding:40px 20px;
+  color:#fff;
 }
 
-h1 {
-  text-align: center;
-  color: #1e88e5;
+.container{
+  max-width:1100px;
+  margin:auto;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:0 10px 40px rgba(0,0,0,0.35);
 }
 
-.section {
-  margin-top: 25px;
+.hero{
+  background:linear-gradient(135deg,#00c6ff,#0072ff);
+  padding:50px 40px;
+  text-align:center;
+  position:relative;
 }
 
-.title {
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #333;
+.hero::after{
+  content:'';
+  position:absolute;
+  width:250px;
+  height:250px;
+  background:rgba(255,255,255,0.12);
+  border-radius:50%;
+  top:-100px;
+  right:-80px;
 }
 
-.item {
-  margin-bottom: 15px;
+.hero h1{
+  font-size:3rem;
+  margin-bottom:10px;
+  font-weight:700;
 }
 
-.line {
-  border-bottom: 1px solid #ccc;
-  display: inline-block;
-  width: 200px;
+.hero p{
+  font-size:1.1rem;
+  opacity:0.95;
 }
 
-.badge {
-  color: green;
-  font-weight: bold;
+.content{
+  padding:40px;
 }
 
+.section{
+  margin-bottom:35px;
+}
+
+.section-title{
+  font-size:1.4rem;
+  font-weight:600;
+  margin-bottom:20px;
+  color:#7fd8ff;
+  border-left:5px solid #00c6ff;
+  padding-left:15px;
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:18px;
+}
+
+.info-card{
+  background:rgba(255,255,255,0.06);
+  padding:18px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.info-card strong{
+  display:block;
+  margin-bottom:8px;
+  color:#9ce6ff;
+}
+
+.module-card{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:22px;
+  padding:25px;
+  margin-bottom:22px;
+  transition:0.3s ease;
+}
+
+.module-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.module-card h3{
+  color:#7fd8ff;
+  margin-bottom:12px;
+  font-size:1.2rem;
+}
+
+.module-card p{
+  margin-bottom:10px;
+  line-height:1.7;
+  color:#e9f6ff;
+}
+
+.result{
+  margin:14px 0;
+  padding:12px;
+  background:rgba(0,198,255,0.12);
+  border-radius:12px;
+  border-left:4px solid #00c6ff;
+}
+
+.juicio{
+  background:rgba(255,255,255,0.04);
+  padding:18px;
+  border-radius:16px;
+  margin-top:15px;
+}
+
+.juicio ul{
+  padding-left:20px;
+}
+
+.juicio li{
+  margin-bottom:10px;
+  line-height:1.6;
+}
+
+.conclusion{
+  background:linear-gradient(135deg,#00c6ff,#0072ff);
+  padding:30px;
+  border-radius:24px;
+  line-height:1.8;
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+.footer{
+  text-align:center;
+  padding:25px;
+  opacity:0.8;
+  font-size:0.9rem;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+  font-size:2.1rem;
+}
+
+.content{
+  padding:20px;
+}
+
+}
 </style>
 </head>
 
@@ -59,95 +182,249 @@ h1 {
 
 <div class="container">
 
-<h1>🧾 REPORTE DE CAPACITACIÓN SST – SAFE GAME</h1>
+<div class="hero">
+  <h1>🎮 SAFE GAME SST</h1>
+  <p>Plataforma interactiva de capacitación en Seguridad y Salud en el Trabajo</p>
+</div>
+
+<div class="content">
 
 <div class="section">
-<div class="title">👤 Datos del participante</div>
-Nombre: <span class="line"></span><br>
-Empresa: <span class="line"></span><br>
-Fecha: <span class="line"></span><br>
-Hora: <span class="line"></span><br>
-Puntaje: <span class="line"></span><br>
-Firma: <span class="line"></span>
-</div>
+  <div class="section-title">👤 Datos del participante</div>
 
-<div class="section">
-<div class="title">📊 Resumen general</div>
-Total de módulos: 9<br>
-Tipo: Juegos interactivos + Videos formativos<br>
-Sistema: Safe Game – Capacitación SST con evidencia digital
-</div>
+  <div class="info-grid">
+    <div class="info-card">
+      <strong>Nombre</strong>
+      ____________________
+    </div>
 
-<div class="section">
-<div class="title">🎮 Juegos interactivos</div>
+    <div class="info-card">
+      <strong>Empresa</strong>
+      ____________________
+    </div>
 
-<div class="item">
-📌 Juego AT – Condiciones de accidentes de trabajo<br>
-Resultado: ____ %<br>
-<span class="badge">✔ Identifica condiciones inseguras</span>
-</div>
+    <div class="info-card">
+      <strong>Fecha</strong>
+      ____________________
+    </div>
 
-<div class="item">
-📌 No te Accidentes – Quiz<br>
-Resultado: ____ %<br>
-<span class="badge">✔ Reconoce prácticas seguras</span>
-</div>
+    <div class="info-card">
+      <strong>Hora</strong>
+      ____________________
+    </div>
 
-<div class="item">
-📌 Inspector X – EPP<br>
-Resultado: ____ %<br>
-<span class="badge">✔ Selecciona EPP correctamente</span>
-</div>
+    <div class="info-card">
+      <strong>Puntaje</strong>
+      ____________________
+    </div>
 
-<div class="item">
-📌 Challenger – EPP<br>
-Resultado: ____ %<br>
-<span class="badge">✔ Clasifica EPP</span>
-</div>
-
-<div class="item">
-📌 Memoria SST<br>
-Resultado: ____ %<br>
-<span class="badge">✔ Relaciona EPP con uso</span>
-</div>
-
-<div class="item">
-📌 Riesgo en Tiempo Real<br>
-Resultado: ____ %<br>
-<span class="badge">✔ Identifica riesgos</span>
-</div>
-
+    <div class="info-card">
+      <strong>Firma</strong>
+      ____________________
+    </div>
+  </div>
 </div>
 
 <div class="section">
-<div class="title">🎥 Videos formativos</div>
+  <div class="section-title">📊 Resumen general</div>
 
-<div class="item">
-📌 Trabajo en Cliente<br>
-Resultado: ____ %<br>
-<span class="badge">✔ Comprende riesgos externos</span>
+  <div class="module-card">
+    <p><strong>Total de módulos:</strong> 9</p>
+    <p><strong>Tipo:</strong> Juegos interactivos + Videos formativos</p>
+    <p><strong>Sistema:</strong> Safe Game – Capacitación SST con evidencia digital</p>
+  </div>
 </div>
 
-<div class="item">
-📌 Riesgo eléctrico<br>
-Resultado: ____ %<br>
-<span class="badge">✔ Reconoce riesgos eléctricos</span>
-</div>
+<div class="section">
+  <div class="section-title">🎮 Juegos interactivos</div>
 
-<div class="item">
-📌 Inducción SST<br>
-Resultado: ____ %<br>
-<span class="badge">✔ Comprende SG-SST</span>
-</div>
+  <div class="module-card">
+    <h3>📌 Juego AT – Condiciones de accidentes de trabajo</h3>
+
+    <p><strong>Tema:</strong> Identificación de condiciones que generan accidentes laborales.</p>
+    <p><strong>Objetivo:</strong> Reconocer factores de riesgo que pueden provocar accidentes.</p>
+
+    <div class="result">
+      Resultado: _______%
+    </div>
+
+    <div class="juicio">
+      <ul>
+        <li>✔ El participante identifica adecuadamente condiciones inseguras y actos subestándar que pueden generar accidentes de trabajo.</li>
+        <li>✔ Reconoce factores de riesgo asociados a tareas operativas y aplica criterios preventivos.</li>
+        <li>✔ Demuestra capacidad de análisis frente a situaciones de peligro y medidas básicas de control.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module-card">
+    <h3>📌 No te Accidentes – Quiz de seguridad</h3>
+
+    <p><strong>Tema:</strong> Condiciones seguras e inseguras.</p>
+    <p><strong>Objetivo:</strong> Evaluar conocimientos en prevención de accidentes.</p>
+
+    <div class="result">
+      Resultado: _______%
+    </div>
+
+    <div class="juicio">
+      <ul>
+        <li>✔ Evidencia conocimientos básicos sobre prevención de accidentes laborales.</li>
+        <li>✔ Reconoce prácticas seguras e inseguras dentro de las actividades laborales.</li>
+        <li>✔ Comprende la importancia del autocuidado y la prevención.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module-card">
+    <h3>📌 Inspector X – Reconocimiento de EPP</h3>
+
+    <p><strong>Tema:</strong> Uso de Elementos de Protección Personal.</p>
+    <p><strong>Objetivo:</strong> Identificar el EPP adecuado según la actividad.</p>
+
+    <div class="result">
+      Resultado: _______%
+    </div>
+
+    <div class="juicio">
+      <ul>
+        <li>✔ Identifica correctamente los EPP requeridos según el riesgo presente.</li>
+        <li>✔ Reconoce la importancia del uso adecuado del EPP.</li>
+        <li>✔ Comprende la función preventiva de los elementos de protección.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module-card">
+    <h3>📌 Challenger – Identificación de EPP</h3>
+
+    <p><strong>Tema:</strong> Clasificación de EPP.</p>
+    <p><strong>Objetivo:</strong> Diferenciar tipos de protección personal.</p>
+
+    <div class="result">
+      Resultado: _______%
+    </div>
+
+    <div class="juicio">
+      <ul>
+        <li>✔ Clasifica adecuadamente los Elementos de Protección Personal.</li>
+        <li>✔ Diferencia equipos de protección para diversos riesgos.</li>
+        <li>✔ Fortalece habilidades de reconocimiento visual y prevención.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module-card">
+    <h3>📌 Memoria SST – Elementos y uso de EPP</h3>
+
+    <p><strong>Tema:</strong> Reconocimiento y uso adecuado del EPP.</p>
+    <p><strong>Objetivo:</strong> Asociar elementos de protección con su función.</p>
+
+    <div class="result">
+      Resultado: _______%
+    </div>
+
+    <div class="juicio">
+      <ul>
+        <li>✔ Relaciona correctamente los EPP con su función preventiva.</li>
+        <li>✔ Evidencia capacidad de asociación y reconocimiento de riesgos.</li>
+        <li>✔ Refuerza conocimientos sobre prevención de accidentes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module-card">
+    <h3>📌 Riesgo en Tiempo Real – Condiciones de riesgo</h3>
+
+    <p><strong>Tema:</strong> Identificación de riesgos en tiempo real.</p>
+    <p><strong>Objetivo:</strong> Detectar peligros en escenarios laborales.</p>
+
+    <div class="result">
+      Resultado: _______%
+    </div>
+
+    <div class="juicio">
+      <ul>
+        <li>✔ Identifica oportunamente condiciones peligrosas.</li>
+        <li>✔ Analiza situaciones de trabajo y propone medidas preventivas.</li>
+        <li>✔ Demuestra capacidad de reacción frente a condiciones inseguras.</li>
+      </ul>
+    </div>
+  </div>
 
 </div>
 
 <div class="section">
-<div class="title">📌 Conclusión</div>
-El participante ha desarrollado competencias en identificación de riesgos, uso de EPP y prevención de accidentes mediante Safe Game.
+  <div class="section-title">🎥 Videos formativos + Quiz</div>
+
+  <div class="module-card">
+    <h3>📌 Trabajo en Cliente</h3>
+
+    <div class="result">
+      Resultado: _______%
+    </div>
+
+    <div class="juicio">
+      <ul>
+        <li>✔ Comprende riesgos asociados a actividades externas.</li>
+        <li>✔ Reconoce medidas preventivas en campo.</li>
+        <li>✔ Evidencia conocimientos sobre comportamiento seguro.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module-card">
+    <h3>📌 Prevención de accidentes eléctricos</h3>
+
+    <div class="result">
+      Resultado: _______%
+    </div>
+
+    <div class="juicio">
+      <ul>
+        <li>✔ Identifica peligros relacionados con riesgo eléctrico.</li>
+        <li>✔ Comprende la importancia de aplicar procedimientos seguros.</li>
+        <li>✔ Reconoce condiciones inseguras asociadas a energía eléctrica.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module-card">
+    <h3>📌 Inducción General SST</h3>
+
+    <div class="result">
+      Resultado: _______%
+    </div>
+
+    <div class="juicio">
+      <ul>
+        <li>✔ Comprende conceptos generales del SG-SST.</li>
+        <li>✔ Reconoce responsabilidades frente a la prevención.</li>
+        <li>✔ Evidencia apropiación básica de normas y medidas preventivas.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="section">
+  <div class="section-title">📌 Conclusión general</div>
+
+  <div class="conclusion">
+    El participante desarrolló competencias relacionadas con la identificación de peligros, prevención de riesgos laborales, reconocimiento de condiciones inseguras y uso adecuado de Elementos de Protección Personal (EPP), mediante actividades interactivas, ejercicios de análisis y evaluación de conocimientos en Seguridad y Salud en el Trabajo.
+    <br><br>
+    Asimismo, evidenció comprensión de conceptos fundamentales del SG-SST, fortaleciendo habilidades orientadas al autocuidado, la prevención de accidentes y la promoción de comportamientos seguros dentro del entorno laboral.
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+  SAFE GAME SST © 2026 | Plataforma interactiva de capacitación
 </div>
 
 </div>
 
 </body>
 </html>
+```
